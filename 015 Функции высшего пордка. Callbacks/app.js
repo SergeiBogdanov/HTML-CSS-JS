@@ -9,15 +9,16 @@
 
 function question(job) {
   const jobsDictionary = {
-    developer: 'Что такое JS?',
-    teacher: 'Какой предмет вы преподаете?',
+    developer: 'что такое JS?',
+    teacher: 'какой предмет вы преподаете?',
   };
 
   return function(name) {
-    return jobsDictionary[job] + ' ' + name;
+    return name + ', ' + jobsDictionary[job] ;
   };
 }
 
 const developerQustion = question('developer');
-console.log(developerQustion);
-console.log(developerQustion('Denis'));
+const teacherQustion = question('teacher');
+console.log(developerQustion('John'));
+console.log(teacherQustion('John'));
